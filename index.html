@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sys 4 U | برامج بتشتغل لشغلك</title>
+<meta name="description" content="Sys 4 U: برنامج كاشير للمحلات والكافيهات، CRM لشركات العقارات، مجسّمات 3D تفاعلية للمشاريع، ومنصات على المقاس. منتجاتنا من غير اشتراك شهري.">
+<meta name="theme-color" content="#0b1c33">
+<meta property="og:title" content="Sys 4 U | برامج بتشتغل لشغلك">
+<meta property="og:description" content="كاشير، CRM عقارات، مجسّمات 3D، ومنصات على المقاس. من غير اشتراك شهري.">
+<meta property="og:image" content="assets/og.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b1c33'/%3E%3Ctext x='32' y='45' font-family='Arial' font-size='38' font-weight='700' text-anchor='middle' fill='%2322d3ee'%3E4%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="assets/Cairo.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="stylesheet" href="style.css">
+<script>
+/* safety net: old browsers (no import maps) or a stuck load fall back to the static layout instead of a blank screen */
+(function(){var r=document.documentElement;
+var ok=!!(window.HTMLScriptElement&&HTMLScriptElement.supports&&HTMLScriptElement.supports('importmap'));
+if(!ok){r.classList.add('nogl');return;}
+r.classList.add('loading');
+setTimeout(function(){if(r.classList.contains('loading')){r.classList.add('nogl');r.classList.remove('loading');}},16000);
+})();
+</script>
+<script type="importmap">{"imports":{"three":"./vendor/three.module.min.js"}}</script>
+</head>
+<body>
+<canvas id="gl" aria-hidden="true"></canvas>
+<div class="vignette" aria-hidden="true"></div>
+
+<header class="top">
+  <a class="logo" href="#" aria-label="Sys 4 U">Sys<span> 4 </span>U</a>
+  <a class="btn btn--wa btn--sm" id="topwa" href="https://wa.me/201037089555?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B9%D8%B1%D9%81%20%D8%A3%D9%83%D8%AA%D8%B1%20%D8%B9%D9%86%20%D8%A8%D8%B1%D8%A7%D9%85%D8%AC%D9%83%D9%85" target="_blank" rel="noopener">كلمنا واتساب</a>
+</header>
+
+<nav class="rail" aria-label="التنقل بين البرامج"></nav>
+
+<div class="stage" id="stage">
+  <article class="panel panel--hero" data-i="0">
+    <p class="kicker">Sys 4 U</p>
+    <h1>برامج <em>بتشتغل</em><br>لشغلك</h1>
+    <p class="lead">كاشير للمحلات، CRM لشركات العقارات، مجسّمات 3D للمشاريع، ومنصات على المقاس. منتجاتنا من غير اشتراك شهري.</p>
+    <p class="hint"><span class="hint__dot"></span> اسحب لتحت وتفرّج على شغلنا</p>
+  </article>
+
+  <article class="panel" data-i="1" data-label="فكّتي"
+           data-wa="السلام عليكم، عايز ديمو لبرنامج فكّتي">
+    <p class="tag">كاشير ومخزون للمحلات والكافيهات</p>
+    <h2>فكّتي</h2>
+    <p class="desc">فاتورة بيع في ثواني، وتقرير بمكسبك اليومي، وتنبيه بالأصناف اللي قربت تخلص.</p>
+    <ul>
+      <li>بيشتغل من غير إنترنت</li>
+      <li>بياناتك على جهازك (ملف Excel)</li>
+      <li>مرة واحدة، من غير اشتراك شهري</li>
+    </ul>
+    <a class="btn btn--wa" href="#" target="_blank" rel="noopener">اطلب ديمو فكّتي</a>
+  </article>
+
+  <article class="panel" data-i="2" data-label="CRM العقارات"
+           data-wa="السلام عليكم، عايز ديمو للـ CRM بتاع شركات العقارات">
+    <p class="tag">CRM لشركات العقارات</p>
+    <h2>كل عملائك في شاشة واحدة</h2>
+    <p class="desc">من أول رسالة لحد التعاقد: مراحل العملاء، وتقويم المعاينات، وعدّاد لأول رد، وخريطة الوحدات وحساب التقسيط.</p>
+    <ul>
+      <li>بلوجو شركتك وعلى طريقة شغلك</li>
+      <li>بنربطه بإعلانات ميتا حسب شغلك</li>
+      <li>مرة واحدة، وهو ملكك</li>
+    </ul>
+    <a class="btn btn--wa" href="#" target="_blank" rel="noopener">اطلب ديمو الـCRM</a>
+  </article>
+
+  <article class="panel" data-i="3" data-label="أوتار سيتي 3D"
+           data-wa="السلام عليكم، عايز مجسّم 3D تفاعلي لمشروعي العقاري">
+    <p class="tag">مجسّم 3D تفاعلي للمشاريع العقارية</p>
+    <h2>أوتار سيتي</h2>
+    <p class="desc">لف حوالين المبنى، افصل الأدوار، وادخل الشقة وتفرّج جواها. شوف مشروعك قبل ما يتبني.</p>
+    <ul>
+      <li>تطبيق أندرويد بيشتغل من غير إنترنت</li>
+      <li>نسخة ويب للكمبيوتر والآيفون</li>
+      <li>بشعار مشروعك وأدواره ووحداته</li>
+    </ul>
+    <a class="btn btn--wa" href="#" target="_blank" rel="noopener">عايز مجسّم لمشروعي</a>
+  </article>
+
+  <article class="panel" data-i="4" data-label="سوق الذهب"
+           data-wa="السلام عليكم، عايز منصة إعلانات زي سوق الذهب">
+    <p class="tag">منصة إعلانات بيع وشراء الذهب</p>
+    <h2>سوق الذهب</h2>
+    <p class="desc">اشترِ وبِع سبائك وجنيهات ومشغولات ذهبية، وكل إعلان بيتراجع قبل ما يظهر.</p>
+    <ul>
+      <li>بحث بالعيار والسعر</li>
+      <li>حسابات للمستخدمين وإعلاناتهم</li>
+      <li>لوحة تحكم للمراجعة والصفقات</li>
+    </ul>
+    <a class="btn btn--wa" href="#" target="_blank" rel="noopener">عايز منصة زي دي</a>
+  </article>
+
+  <article class="panel panel--end" data-i="5" data-label="كلمنا"
+           data-wa="السلام عليكم، عايز برنامج على المقاس لشغلي">
+    <p class="kicker">Sys 4 U</p>
+    <h2>عايز برنامج لشغلك؟</h2>
+    <p class="lead">قولّي شغلك بيعمل إيه، ونبنيهولك على المقاس. منتجاتنا من غير اشتراك شهري، والسعر بنقوله في مكالمة.</p>
+    <div class="row">
+      <a class="btn btn--wa btn--lg" href="#" target="_blank" rel="noopener">واتساب 01037089555</a>
+      <a class="btn btn--ghost" href="https://www.instagram.com/systemforyouu/" target="_blank" rel="noopener">إنستجرام</a>
+      <a class="btn btn--ghost" href="https://www.facebook.com/profile.php?id=61595118750252" target="_blank" rel="noopener">فيسبوك</a>
+    </div>
+  </article>
+</div>
+
+<div class="scrollhint" aria-hidden="true">↓</div>
+
+<!-- shown only when WebGL is not available -->
+<section class="fallback" aria-label="برامجنا">
+  <figure><img src="assets/fakkty.jpg" alt="فكّتي" loading="lazy"><figcaption>فكّتي: كاشير ومخزون</figcaption></figure>
+  <figure><img src="assets/crm.jpg" alt="CRM العقارات" loading="lazy"><figcaption>CRM لشركات العقارات</figcaption></figure>
+  <figure><img src="assets/awtar-poster.jpg" alt="أوتار سيتي 3D" loading="lazy"><figcaption>أوتار سيتي: مجسّم 3D تفاعلي</figcaption></figure>
+  <figure><img src="assets/gold.jpg" alt="سوق الذهب" loading="lazy"><figcaption>سوق الذهب: منصة إعلانات</figcaption></figure>
+</section>
+
+<video id="awtarVideo" src="assets/awtar.mp4" poster="assets/awtar-poster.jpg" muted loop playsinline preload="none" style="position:fixed;left:-9999px;top:0;width:2px;height:2px;opacity:0;pointer-events:none"></video>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
